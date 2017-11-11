@@ -72,11 +72,6 @@ public class RegisterDelMen {
                 ad.add(dm);
                 System.out.println("Register Sucessful!");
                 System.out.println("");
-                for (int i = 0; i < ad.size(); i++) {
-                   System.out.println(""+ad.get(i).getDelmenId());
-                System.out.println(""+ad.get(i).getDelmenName());
-                }
-                
                 check.clear();
                 RegisterDelMen();
                 break;
