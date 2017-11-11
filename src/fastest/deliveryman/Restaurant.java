@@ -44,7 +44,7 @@ public class Restaurant {
          do{
              if(count>0)
               {
-                  System.out.println("Time Not Valid");
+                  System.out.println("Times Not Valid");
               }
          System.out.print("Please input Available Time : Start TIme (Format HH:MM)");
           temp = scan.nextLine();
