@@ -18,6 +18,7 @@ public class RestaurantOwner {
     private String style;
     private String AvailableTime;
     private String password;
+    private String Status;
     
     public RestaurantOwner()
     {
@@ -33,7 +34,16 @@ public class RestaurantOwner {
         this.style = style;
         this.AvailableTime = AvailableTime;
         this.password = password;
+        this.Status="Activated";
         id++;
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String Status) {
+        this.Status = Status;
     }
 
     public int getId() {
@@ -97,3 +107,5 @@ public class RestaurantOwner {
     
     
 }
+
+

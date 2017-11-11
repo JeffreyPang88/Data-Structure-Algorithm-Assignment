@@ -19,7 +19,13 @@ public class FastestDeliveryman {
     public static void main(String[] args) {
         // TODO code application logic here
          Restaurant r = new Restaurant();
+         FoodMenu f = new FoodMenu();
          r.registrationRestaurantOwner();
+         r.DisplayAccountInfo();
+        // f.addFood();
+         //f.displayAllFood();
+         //f.displayMenu();
+         
     }
     
 }

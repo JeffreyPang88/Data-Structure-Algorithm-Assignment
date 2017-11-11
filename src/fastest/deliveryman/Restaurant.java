@@ -16,7 +16,7 @@ public class Restaurant {
     public static int count=0;
     public String temp;
     public ArrayList<String> input = new ArrayList<>();
-    public ArrayList<RestaurantOwner> Ro = new ArrayList<>();
+    public static ArrayList<RestaurantOwner> Ro = new ArrayList<>();
     
    public void registrationRestaurantOwner()
     {
@@ -78,13 +78,14 @@ public class Restaurant {
         System.out.println("Password        : "+ Ro.get(0).getPassword());
         System.out.println("Address         :"+ Ro.get(0).getAddress());
         System.out.println("Style           :"+ Ro.get(0).getStyle());
+        System.out.println("Status           :"+ Ro.get(0).getStatus());
         System.out.println("Available Time  :"+ Ro.get(0).getAvailableTime());
         System.out.println("\nPress any key to continue");
         scan.nextLine();
        
     }
    
-   public boolean checkExit(ArrayList l)
+   public static boolean checkExit(ArrayList l)
    {
        boolean exit = false;
        if(l.contains("exit"))
@@ -112,6 +113,46 @@ public class Restaurant {
            timeValid=false;}else
            timeValid=false;
        return timeValid;
+   }
+   
+   public void DisplayAccountInfo()
+   {
+       for(int i=0;i<Ro.size();i++){
+           if(Ro.get(i).getId()==1001)
+           {
+                System.out.println("ID               : "+Ro.get(i).getId());
+               System.out.println("Name              : "+Ro.get(i).getRestaurantName());
+               System.out.println("Address           : "+Ro.get(i).getAddress());
+               System.out.println("Contact No        : "+Ro.get(i).getContactNo());
+               System.out.println("Password          : "+Ro.get(i).getPassword());
+               System.out.println("Status            : "+Ro.get(i).getStatus());
+                System.out.println("Style            : "+Ro.get(i).getStyle());
+                 System.out.println("Available Time  : "+Ro.get(i).getAvailableTime());
+                 System.out.println("Options : 1. Deactivated Account  2. Update Details 3.Exit");
+                 if(scan.nextLine().equals("1"))
+                 { 
+                     System.out.println("Are you sure ? Y/N");
+                     if(scan.nextLine().equals("Y"))
+                     {DeactivatedAccount(0);
+                     return;}
+                     else if(scan.nextLine().equals("N"))
+                     {
+                         DisplayAccountInfo();
+                     }else
+                     {
+                         System.out.println("Invalid Input");
+                         DisplayAccountInfo();
+                     }
+                 
+                 }else if(scan.nextLine().equals("2")){}else{return;}
+           }
+       }
+      
+   }
+   
+   public void DeactivatedAccount(int account)
+   {
+       Ro.get(account).setStatus("Deactivated");
    }
    
    public String chooseStyleMethod()
