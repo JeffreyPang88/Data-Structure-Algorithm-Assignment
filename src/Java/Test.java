@@ -16,7 +16,7 @@ public class Test {
      */
     public static void main(String[] args) {
         RegisterDelMen d = new RegisterDelMen();
-        d.RegisterDelMen();
+        d.RegisterDelMan();
     }
     
 }
