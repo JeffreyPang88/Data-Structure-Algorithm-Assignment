@@ -3,6 +3,7 @@ package Domain;
 public class DeliveryMen {
 
     private static int delmenID = 601001;
+    private int delmenId;
     private String password;
     private String delmenName;
     private String ContactNum;
@@ -14,7 +15,8 @@ public class DeliveryMen {
         
     }
 
-    public DeliveryMen(String password, String delmenName, String ContactNum, String homeAddress, String jonDate, String status) {
+    public DeliveryMen(int delmenId, String password, String delmenName, String ContactNum, String homeAddress, String jonDate, String status) {
+        this.delmenId = delmenId;
         this.password = password;
         this.delmenName = delmenName;
         this.ContactNum = ContactNum;
@@ -22,6 +24,14 @@ public class DeliveryMen {
         this.joinDate = jonDate;
         this.status = status;
         delmenID++;
+    }
+
+    public int getDelmenId() {
+        return delmenId;
+    }
+
+    public void setDelmenId(int delmenId) {
+        this.delmenId = delmenId;
     }
 
     public static int getDelmenID() {

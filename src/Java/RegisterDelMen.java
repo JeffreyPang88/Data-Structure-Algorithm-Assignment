@@ -68,10 +68,15 @@ public class RegisterDelMen {
         ans = scan.nextLine();
         switch (ans) {
             case "Y":
-                DeliveryMen dm = new DeliveryMen("ABC123",check.get(0), check.get(1), check.get(2), getDateTime(), "Available");
+                DeliveryMen dm = new DeliveryMen(DeliveryMen.getDelmenID(), "ABC123",check.get(0), check.get(1), check.get(2), getDateTime(), "Available");
                 ad.add(dm);
                 System.out.println("Register Sucessful!");
                 System.out.println("");
+                for (int i = 0; i < ad.size(); i++) {
+                   System.out.println(""+ad.get(i).getDelmenId());
+                System.out.println(""+ad.get(i).getDelmenName());
+                }
+                
                 check.clear();
                 RegisterDelMen();
                 break;
