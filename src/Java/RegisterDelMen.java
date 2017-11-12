@@ -16,17 +16,11 @@ public class RegisterDelMen {
     int c;
 
     public void DeliveryMenDetails() {
-        DeliveryMen[] dl = new DeliveryMen[5];
-        int n = 0;
-        dl[n] = new DeliveryMen(601001, "ABC123", "Jorn Lim", "011-12345678", "Pertaling Jaya", "13/11/2016", "Available");
-        dl[n] = new DeliveryMen(601002, "Hii123", "Mark", "018-1234567", "Wangsa Maju", "10/11/2016", "Available");
-        dl[n] = new DeliveryMen(601003, "Waa123", "Jolin", "017-1234567", "Setapak", "17/11/2016", "Available");
-        dl[n] = new DeliveryMen(601004, "Qzz123", "Sam", "016-1234567", "Seremban", "21/11/2016", "Available");
-        dl[n] = new DeliveryMen(601005, "Zaa123", "Zack", "013-1234567", "Port Dickson", "30/11/2016", "Available");
-
-        for (int a = 0; a < dl.length; a++) {
-            ad.add(dl[n]);
-        }
+        ad.add(new DeliveryMen(601001, "ABC123", "Jorn Lim", "011-12345678", "Pertaling Jaya", "13/11/2016", "Available"));
+        ad.add(new DeliveryMen(601002, "Hii123", "Mark", "018-1234567", "Wangsa Maju", "10/11/2016", "Available"));
+        ad.add(new DeliveryMen(601003, "Waa123", "Jolin", "017-1234567", "Setapak", "17/11/2016", "Available"));
+        ad.add(new DeliveryMen(601004, "Qzz123", "Sam", "016-1234567", "Seremban", "21/11/2016", "Available"));
+        ad.add(new DeliveryMen(601005, "Zaa123", "Zack", "013-1234567", "Port Dickson", "30/11/2016", "Available"));
     }
 
     public void RegisterDelMan() {
