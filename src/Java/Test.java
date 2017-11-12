@@ -15,7 +15,7 @@ public class Test {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        updDelmenConInfo d = new updDelmenConInfo();
+        RegisterDelMen d = new RegisterDelMen();
         d.RegisterDelMan();
     }
     
